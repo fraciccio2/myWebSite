@@ -1,0 +1,99 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+    --color-bg: #171e2b;
+    --color-bg-variant: #2c2c6c;
+    --color-primary: #146c43;
+    --color-primary-variant: rgba(77, 181, 255, 0.4);
+    --color-white: #fff;
+    --color-light: rgba(255, 255, 255, 0.6);
+    --container-widht-lg: 75%;
+    --container-widht-md: 86%;
+    --container-widht-sm: 90%;
+    --transition: all 400ms ease;
+  }
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  .container {
+    width: var(--container-widht-lg);
+    margin: 0 auto;
+  }
+  h1.h2,
+  h3,
+  h4,
+  h5 {
+    font-weight: 500;
+  }
+  
+  h1{
+      font-size: 2.5rem;
+  }
+  
+  section{
+      margin-top:7rem;
+  }
+  section > h2, section >h5 {
+      text-align: center;
+      color: var(--color-light);
+  }
+  section > h2{
+      color: var(--color-primary);
+      margin-bottom: 3rem;
+  }
+  .text-light{
+      color: var(--color-light);
+  }
+  a{
+      color: var(--color-primary);
+      transition: var(--transition);
+  }
+  
+  a:hover {
+      color: var(--color-white);
+  }
+  
+  .btn {
+     width: max-content;
+     display: inline-block;
+     color: var(--color-primary);
+     padding:0.75rem 1.2rem;
+     border-radius: 0.4rem;
+     cursor: pointer;
+     border: 1px solid var(--color-primary);
+     transition: var(--transition);
+  }
+  .btn:hover{
+      background: var(--color-white);
+      color: var(--color-bg);
+      border-color: transparent;
+  }
+  
+  img {
+      display: block;
+      width: 100%;
+      object-fit: cover;
+  }
+  /* MEDIA QUERIES MEDIUM */
+  
+  @media screen and (max-width:1024px) {
+      .container{
+          width: var(--container-widht-md);
+      }
+      
+      section{
+          margin-top: 6rem;
+      }
+      
+  }
+  /* MEDIA QUERIES SMALL */
+  
+  @media screen and (max-width:600px) {
+      .container{
+          width: var(--container-widht-sm);
+      }
+      
+      section > h2{
+          margin-bottom: 2rem;
+      }
+      
+  }  
