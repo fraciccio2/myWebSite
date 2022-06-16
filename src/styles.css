@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 :root {
-    --color-bg: rgb(20, 130, 100);
+    --color-bg: rgb(2, 38, 29);
     --color-bg-variant: rgb(25, 113, 73);
     --color-primary: rgb(20, 108, 67);
     --color-primary-variant: rgb(15, 152, 84);
@@ -90,6 +90,11 @@ img {
     display: block;
     width: 100%;
     object-fit: cover;
+}
+
+body{
+  background-image: url(assets/background/svg-background.webp);
+  background-size: cover;
 }
 
 /* MEDIA QUERIES MEDIUM */

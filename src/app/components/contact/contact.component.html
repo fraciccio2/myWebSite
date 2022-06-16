@@ -1,0 +1,32 @@
+<section id="contact">
+  <h5>Get In Touch</h5>
+  <h2>Conctact Me</h2>
+  <div class="container contact__container">
+    <div class="contact__options">
+      <article class="contact__option">
+        <i class="bi bi-envelope"></i>
+        <h4>Email</h4>
+        <h5 style="font-size: revert">francesco.giacomazzo2@gmail.com</h5>
+        <a href="mailto:francesco.giacomazzo2@gmail.com" target="_blank">Send a message</a>
+      </article>
+      <article class="contact__option">
+        <i class="bi bi-phone"></i>
+        <h4>Number</h4>
+        <h5>+39 3475802000</h5>
+        <a href="tel:+393475802000" target="_blank">Call Me</a>
+      </article>
+      <article class="contact__option">
+        <i class="bi bi-whatsapp"></i>
+        <h4>Whatsapp</h4>
+        <h5>+39 3475802000</h5>
+        <a href="https://wa.me/+393475802000?text=More Info" target="_blank">Send a message</a>
+      </article>
+    </div>
+    <form [formGroup]="formGroup" (ngSubmit)="onSubmit(formGroup.value)">
+      <input type="text" name="name" placeholder="Your Full Name" [formControlName]="formControlNameUser">
+      <input type="email" name="email" placeholder="Your Email" [formControlName]="formControlNameMail">
+      <textarea name="message" rows="7" placeholder="Your Message" [formControlName]="formControlNameMessage"></textarea>
+      <button type="submit" class="btn btn-success" [disabled]="formGroup.invalid">Send Message</button>
+    </form>
+  </div>
+</section>
