@@ -1,0 +1,38 @@
+.input {
+  height: 50px;
+  width: 100%;
+  border: 1px solid #e3e3e3;
+  border-radius: 2px;
+  padding: 0 20px;
+
+  &:hover,
+  &:focus-visible,
+  &:active {
+    border: 2px solid var(--color-primary) !important;
+    outline: none;
+  }
+}
+
+.text-area {
+  height: 130px;
+  width: 100%;
+  border: 1px solid #e3e3e3;
+  padding: 15px 20px;
+  resize: none;
+  display: block;
+  border-radius: 2px;
+
+  &:hover,
+  &:focus-visible,
+  &:active {
+    border: 2px solid var(--color-primary) !important;
+    outline: none;
+  }
+}
+
+.site-btn {
+  background-color: var(--color-primary);
+  padding: 0.75rem 1.75rem;
+  color: white !important;
+  border: none;
+}

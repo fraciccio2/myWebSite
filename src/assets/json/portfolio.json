@@ -1,0 +1,42 @@
+[
+  {
+    "link": "https://github.com/fraciccio2/booklist",
+    "img": "assets/images/booklist.png",
+    "name": "Website \"BookList\""
+  },
+  {
+    "link": "https://github.com/fraciccio2/webAppCom",
+    "img": "assets/images/booklist.png",
+    "name": "Accountant Web Site"
+  },
+  {
+    "link": "https://github.com/fraciccio2/UniVai",
+    "img": "assets/images/booklist.png",
+    "name": "Android App \"UniVai\""
+  },
+  {
+    "link": "https://github.com/fraciccio2/beautify-json",
+    "img": "assets/images/booklist.png",
+    "name": "Website \"BeautifyJSON\""
+  },
+  {
+    "link": "https://github.com/fraciccio2/scouting-api",
+    "img": "assets/images/booklist.png",
+    "name": "API for \"Scouting App\""
+  },
+  {
+    "link": "https://github.com/fraciccio2/scouting-app",
+    "img": "assets/images/booklist.png",
+    "name": "VolleyBall Scouting Website \"Scouting App\""
+  },
+  {
+    "link": "https://github.com/fraciccio2/WriterRecognitionApi",
+    "img": "assets/images/booklist.png",
+    "name": "API for \"Writer Recognition App\""
+  },
+  {
+    "link": "https://github.com/fraciccio2/WriterRecognitionApp",
+    "img": "assets/images/booklist.png",
+    "name": "Android App \"Writer Recognition App\""
+  }
+]
