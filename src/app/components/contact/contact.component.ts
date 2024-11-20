@@ -26,8 +26,8 @@ export class ContactComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onSubmit(input: Record<string, string>) {
-    this.contactService.postMessage(input).subscribe(response => {
+  onSubmit(input: any) {
+    this.contactService.postMessage(input).subscribe(() => {
         location.href = 'https://mailthis.to/confirm';
       },
       error => {

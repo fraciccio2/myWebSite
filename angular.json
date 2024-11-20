@@ -102,5 +102,8 @@
       }
     }
   },
-  "defaultProject": "myWebSite"
+  "defaultProject": "myWebSite",
+  "cli": {
+    "analytics": false
+  }
 }
