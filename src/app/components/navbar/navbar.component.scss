@@ -1,0 +1,17 @@
+.mobile-menu {
+  display: none;
+}
+
+.show {
+  display: flex !important;
+  z-index: 1050;
+}
+
+.navbar {
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.navbar.scrolled {
+  box-shadow: 0 5px 10px rgba(37, 37, 37, 0.1);
+  border-bottom-color: transparent;
+}

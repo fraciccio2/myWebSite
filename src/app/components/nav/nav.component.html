@@ -1,6 +1,0 @@
-<nav>
-  <a [href]="element.href" *ngFor="let element of elements; index as i" (click)="setActive(i)"
-     [ngClass]="{'active': isActive[i]}" [title]="element.tooltip" ngbTooltip="{{element.tooltip}}" container="body" placement="top">
-    <i [class]="element.icon"></i>
-  </a>
-</nav>

@@ -1,0 +1,72 @@
+<nav
+  class="navbar navbar-expand-lg navbar-light bg-light fixed-top"
+  [ngClass]="{ scrolled: isScrolled }"
+>
+  <div class="container">
+    <!-- Logo -->
+    <a class="navbar-brand" href="#">
+      <img src="path-to-logo.png" alt="Logo" style="height: 40px" />
+    </a>
+
+    <!-- Toggler Button for Mobile -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      (click)="showMenu()"
+      [attr.aria-expanded]="isToggleMenuVisible"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar Content -->
+    <div class="collapse navbar-collapse">
+      <!-- Menu Items (hidden on mobile) -->
+      <ul class="navbar-nav ms-auto d-none d-lg-flex">
+        <li class="nav-item">
+          <a class="nav-link fs-4" href="#hello">HELLO</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fs-4" href="#skills">SKILLS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fs-4" href="#experience">EXPERIENCE</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fs-4" href="#education">EDUCATION</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fs-4" href="#portfolio">PORTFOLIO</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fs-4" href="#contactme">CONTACT ME</a>
+        </li>
+      </ul>
+
+      <!-- Menu Items (full screen for mobile) -->
+      <ul
+        [ngClass]="{ show: isToggleMenuVisible }"
+        class="navbar-nav d-lg-none bg-light position-fixed top-0 start-0 w-100 h-100 justify-content-center align-items-center mobile-menu"
+      >
+        <li class="nav-item">
+          <a class="nav-link fs-4" href="#hello">HELLO</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fs-4" href="#skills">SKILLS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fs-4" href="#experience">EXPERIENCE</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fs-4" href="#education">EDUCATION</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fs-4" href="#portfolio">PORTFOLIO</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fs-4" href="#contactme">CONTACT ME</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
