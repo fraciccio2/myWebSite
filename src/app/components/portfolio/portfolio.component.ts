@@ -1,10 +1,11 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { NgClass } from '@angular/common';
 
 @Component({
   selector: 'app-portfolio',
   standalone: true,
-  imports: [],
+  imports: [NgClass],
   templateUrl: './portfolio.component.html',
   styleUrl: './portfolio.component.scss',
 })
@@ -19,11 +20,14 @@ export class PortfolioComponent implements OnInit {
       .subscribe((projects) => (this.projects = projects));
   }
 
-  routeToGithubProject(link: string) {}
+  routeToLink(link: string) {
+    window.open(link, '_blank');
+  }
 }
 
 interface ProjectModel {
   img: string;
-  link: string;
+  linkGitHub: string;
+  linkSite: string;
   name: string;
 }

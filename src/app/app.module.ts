@@ -12,11 +12,18 @@ import { EducationComponent } from './components/education/education.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { provideHttpClient } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot({
+      autoDismiss: true,
+    }),
     ReactiveFormsModule,
     NgbModule,
     NavbarComponent,
@@ -26,6 +33,7 @@ import { provideHttpClient } from '@angular/common/http';
     EducationComponent,
     PortfolioComponent,
     ContactComponent,
+    FooterComponent,
   ],
   bootstrap: [AppComponent],
   providers: [provideHttpClient()],

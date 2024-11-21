@@ -1,10 +1,31 @@
 :root {
   --color-primary: #33f;
   --color-secondary: #efefef;
+  --color-danger: #dc3545;
 }
 
 .section {
   padding-top: 3rem;
   padding-bottom: 3rem;
   border-bottom: 1px solid #e3e3e3;
+}
+
+.code-img {
+  flex-direction: column;
+  display: flex;
+  justify-content: space-between;
+
+  .code {
+    margin-top: 2rem;
+
+    img {
+      width: 20%;
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .code {
+    display: none;
+  }
 }

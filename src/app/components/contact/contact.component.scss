@@ -35,4 +35,28 @@
   padding: 0.75rem 1.75rem;
   color: white !important;
   border: none;
+  margin-right: calc(var(--bs-gutter-x) * 0.5);
+}
+
+::ng-deep.danger-tooltip {
+  .tooltip-inner {
+    background-color: var(--color-danger);
+  }
+}
+
+::ng-deep.danger-tooltip.bs-tooltip-end .tooltip-arrow::before {
+  border-right-color: var(--color-danger);
+}
+
+::ng-deep.danger-tooltip.bs-tooltip-start .tooltip-arrow::before {
+  border-left-color: var(--color-danger);
+}
+
+::ng-deep.danger-tooltip.bs-tooltip-top .tooltip-arrow::before {
+  border-top-color: var(--color-danger);
+  top: -6px;
+}
+
+::ng-deep.danger-tooltip.bs-tooltip-bottom .tooltip-arrow::before {
+  border-bottom-color: var(--color-danger);
 }

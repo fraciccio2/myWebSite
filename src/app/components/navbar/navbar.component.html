@@ -5,7 +5,7 @@
   <div class="container">
     <!-- Logo -->
     <a class="navbar-brand" href="#">
-      <img src="path-to-logo.png" alt="Logo" style="height: 40px" />
+      <img [src]="'assets/images/logo.png'" alt="Logo" class="logo" />
     </a>
 
     <!-- Toggler Button for Mobile -->
@@ -20,51 +20,69 @@
     </button>
 
     <!-- Navbar Content -->
-    <div class="collapse navbar-collapse">
+    <div class="collapse navbar-collapse d-block">
       <!-- Menu Items (hidden on mobile) -->
       <ul class="navbar-nav ms-auto d-none d-lg-flex">
         <li class="nav-item">
-          <a class="nav-link fs-4" href="#hello">HELLO</a>
+          <a class="nav-link fs-6" href="#hello">HELLO</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link fs-4" href="#skills">SKILLS</a>
+          <a class="nav-link fs-6" href="#skills">SKILLS</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link fs-4" href="#experience">EXPERIENCE</a>
+          <a class="nav-link fs-6" href="#experience">EXPERIENCE</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link fs-4" href="#education">EDUCATION</a>
+          <a class="nav-link fs-6" href="#education">EDUCATION</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link fs-4" href="#portfolio">PORTFOLIO</a>
+          <a class="nav-link fs-6" href="#portfolio">PORTFOLIO</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link fs-4" href="#contact">CONTACT ME</a>
+          <a class="nav-link fs-6" href="#contact">CONTACT</a>
         </li>
       </ul>
 
       <!-- Menu Items (full screen for mobile) -->
+      <button
+        class="btn btn-light"
+        [ngClass]="{
+          'd-block': isToggleMenuVisible,
+          'd-none': !isToggleMenuVisible
+        }"
+        (click)="hideMenu()"
+      >
+        <i class="bi bi-x-lg"></i>
+      </button>
       <ul
         [ngClass]="{ show: isToggleMenuVisible }"
         class="navbar-nav d-lg-none bg-light position-fixed top-0 start-0 w-100 h-100 justify-content-center align-items-center mobile-menu"
       >
         <li class="nav-item">
-          <a class="nav-link fs-4" href="#hello">HELLO</a>
+          <a class="nav-link fs-4" href="#hello" (click)="hideMenu()">HELLO</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link fs-4" href="#skills">SKILLS</a>
+          <a class="nav-link fs-4" href="#skills" (click)="hideMenu()"
+            >SKILLS</a
+          >
         </li>
         <li class="nav-item">
-          <a class="nav-link fs-4" href="#experience">EXPERIENCE</a>
+          <a class="nav-link fs-4" href="#experience" (click)="hideMenu()"
+            >EXPERIENCE</a
+          >
         </li>
         <li class="nav-item">
-          <a class="nav-link fs-4" href="#education">EDUCATION</a>
+          <a class="nav-link fs-4" href="#education" (click)="hideMenu()"
+            >EDUCATION</a
+          >
         </li>
         <li class="nav-item">
-          <a class="nav-link fs-4" href="#portfolio">PORTFOLIO</a>
+          <a class="nav-link fs-4" href="#portfolio" (click)="hideMenu()"
+            >PORTFOLIO</a
+          >
         </li>
         <li class="nav-item">
-          <a class="nav-link fs-4" href="#contact">CONTACT ME</a>
+          <a class="nav-link fs-4" href="#contact">CONTACT</a>
         </li>
       </ul>
     </div>

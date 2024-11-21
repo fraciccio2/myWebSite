@@ -12,15 +12,32 @@
         <div class="portfolio">
           <div class="row">
             @for(project of projects; track project) {
-            <div
-              class="col-md-3 col-sm-6 col-xs-6 mix web-sites"
-              (click)="routeToGithubProject(project.link)"
-            >
+            <div class="col-md-3 col-sm-6 col-xs-6 mix web-sites">
               <div class="portfolio-img">
                 <img [src]="project.img" alt="" />
               </div>
               <div class="portfolio-name">
                 <span>{{ project.name }}</span>
+              </div>
+              <div class="row mt-2">
+                <div class="col-6" [ngClass]="{ 'col-12': !project.linkSite }">
+                  <button
+                    class="git-btn"
+                    (click)="routeToLink(project.linkGitHub)"
+                  >
+                    GITHUB<i class="ms-2 bi bi-github"></i>
+                  </button>
+                </div>
+                @if(project.linkSite) {
+                <div class="col-6">
+                  <button
+                    class="redirect-btn"
+                    (click)="routeToLink(project.linkSite)"
+                  >
+                    SITE<i class="ms-2 bi bi-box-arrow-up-right"></i>
+                  </button>
+                </div>
+                }
               </div>
             </div>
             }
